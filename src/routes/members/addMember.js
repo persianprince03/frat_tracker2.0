@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import Web_Header from "../../main-components/web_header";
+import WebHeader from "../../main-components/web_header";
 
 export default function AddMember() {
     const [email, setEmail ] = useState('')
@@ -32,7 +32,7 @@ export default function AddMember() {
 
     return(
         <div>
-            <Web_Header/>
+            <WebHeader/>
             <div>
                     <Box component="form" noValidate sx={{ mt: 1 }}>
                         <TextField

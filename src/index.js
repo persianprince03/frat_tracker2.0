@@ -7,7 +7,7 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import SignInSide from './routes/login/login';
-import Main_Page from './routes/main/main_page';
+import MainPage from './routes/main/main_page';
 import AddMember from './routes/members/addMember';
 import Transactions from './routes/transactions/transactions';
 
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     },
     {
         path:'/main',
-        element: <Main_Page/>
+        element: <MainPage/>
     },
     {
         path:'/main/add_member',
