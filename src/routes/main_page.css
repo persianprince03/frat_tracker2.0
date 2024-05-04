@@ -1,0 +1,9 @@
+.background{
+   background-color: #FBBC05;
+    background-image: url("../assets/Coat of Arms.png");
+    background-size: 30vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: top;
+    padding: 18vh;
+}
