@@ -26,6 +26,12 @@ export  default function Main_Page(){
                     sx ={{mt:3, mb:2}}>
                     Roster
                 </Button>
+                <Button
+                    onClick={() => navigate('/main/tree')}
+                    variant = "contained"
+                    sx ={{mt:3, mb:2}}>
+                    Family Tree
+                </Button>
 
             </div>
         </>

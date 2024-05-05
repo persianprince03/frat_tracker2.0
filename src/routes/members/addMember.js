@@ -4,31 +4,32 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import WebHeader from "../../main-components/web_header";
 
-export default function AddMember() {
+const AddMember = () => {
     const [email, setEmail ] = useState('')
     const [fname, setFname] = useState('')
     const [lname, setLname] = useState('')
     const [bday, setBday] = useState('')
 
-    // const SubmitForm = async e => {
-    //     e.preventDefault();
-    //     const response = await fetch("http://localhost:3001/add-member", {
-    //         method: "POST",
-    //         headers: { "Content-Type": "application/json" },
-    //         body: JSON.stringify({email})
-    //     }).then( (res) => {
-    //         console.log(res);
-    //         }
-    //     ).catch( (error) => {
-    //         console.log(error);
-    //         }
-    //     );
-    //     //
-    //     //     window.location = "/add_member";
-    //     // } catch (err) {
-    //     //     console.error(err.message);
-    //     // }
-    // };
+    const SubmitForm = async e => {
+        // console.log(res)
+        // e.preventDefault();
+        // console.log(body)
+        const body = {email, fname, lname, bday}
+        try {
+            const response = await fetch("http://localhost:3002/add-member", {// eslint-disable-next-line
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(body)
+            });
+        } catch (err) {
+            console.error(err.message)
+        }
+    };
+        //
+        //     window.location = "/add_member";
+        // } catch (err) {
+        //     console.error(err.message);
+        // }
 
     return(
         <div>
@@ -85,10 +86,12 @@ export default function AddMember() {
                         />
                         <Button
                             variant="contained"
-                            // onClick={() => SubmitForm()}
+                            onClick={() => SubmitForm()}
                         >Submit</Button>
                     </Box>
             </div>
         </div>
     )
 }
+
+export default AddMember;

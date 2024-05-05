@@ -10,6 +10,11 @@ import SignInSide from './routes/login/login';
 import MainPage from './routes/main/main_page';
 import AddMember from './routes/members/addMember';
 import Transactions from './routes/transactions/transactions';
+// import {Member} from "./routes/members/getMember";
+// import Contact from "./main-components/memebrCard";
+// import Flow from "./routes/familyTree";
+import jsonGen from "./jsonGenerator/jsonGen"
+import FamilyTree from "./routes/familyTree/familyTree";
 
 const router = createBrowserRouter([
     {
@@ -30,8 +35,12 @@ const router = createBrowserRouter([
     },
     // {
     //     path:'/main/roster',
-    //     element:member()
+    //     element: <Contact/>
     // }
+    {
+        path:'/main/tree',
+        element: <FamilyTree />
+    }
 ]);
 
 
